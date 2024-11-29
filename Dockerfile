@@ -14,7 +14,7 @@ COPY pentest/* /root/pentest
 RUN setcap cap_net_raw,cap_net_admin,cap_net_bind_service+eip $(which nmap)
 RUN setcap cap_net_raw+eip $(which nmap)
 
-USER 1001
+USER root
 
 CMD ["nmap", "--privileged", "-sU", "localhost"]
 
