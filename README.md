@@ -47,9 +47,16 @@ podman run --privileged -it quay.io/denis_pttrsn/rhel-nmap:latest nmap -sS <host
 
 ## Building Locally
 
+### With Docker
 ```bash
 docker build -t rhel-nmap:latest .
 docker run --privileged -it rhel-nmap:latest nmap -sS <hostname>
+```
+
+### With Podman
+```bash
+podman build -t rhel-nmap:latest .
+podman run --privileged -it rhel-nmap:latest nmap -sS <hostname>
 ```
 
 ## Image Details
